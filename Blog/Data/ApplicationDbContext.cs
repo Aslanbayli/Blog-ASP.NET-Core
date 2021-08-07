@@ -23,7 +23,8 @@ namespace Blog.Data
             builder.Entity<PostTranslation>()
                 .HasOne(p => p.Post)
                 .WithMany(t => t.PostTranslations)
-                .OnDelete(DeleteBehavior.NoAction);
+                .HasForeignKey(k => k.PostId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         public virtual DbSet<Category> Category { get; set; }

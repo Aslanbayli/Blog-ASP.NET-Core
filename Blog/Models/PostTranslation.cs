@@ -27,11 +27,11 @@ namespace Blog.Models
 
         public string Body { get; set; }
 
-        public DateTime LastChanged { get; set; }
+        public DateTime? LastChanged { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
-        public DateTime PublishedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
 
         // Relationships
         public Category Category { get; set; }
