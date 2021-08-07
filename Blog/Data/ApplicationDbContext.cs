@@ -8,29 +8,40 @@ using System.Text;
 
 namespace Blog.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<uint>, uint>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-        
-        DbSet<Category> Category { get; set; }
 
-        DbSet<Language> Language { get; set; }
 
-        DbSet<CategoryTranslation> CategoryTranslation { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
 
-        DbSet<PostTranslation> PostTranslation { get; set; }
+            builder.Entity<PostTranslation>()
+                .HasOne(p => p.Post)
+                .WithMany(t => t.PostTranslations)
+                .OnDelete(DeleteBehavior.NoAction);
+        }
 
-        DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
 
-        DbSet<Post> Post { get; set; }
+        public virtual DbSet<Language> Language { get; set; }
 
-        DbSet<Tag> Tag { get; set; }
+        public virtual DbSet<CategoryTranslation> CategoryTranslation { get; set; }
 
-        DbSet<PostTag> PostTag { get; set; }
+        public virtual DbSet<PostTranslation> PostTranslation { get; set; }
 
-        DbSet<Status> Status { get; set; }
+        public virtual DbSet<ApplicationUser> ApplicationUser { get; set; }
+
+        public virtual DbSet<Post> Post { get; set; }
+
+        public virtual DbSet<Tag> Tag { get; set; }
+
+        public virtual DbSet<PostTag> PostTag { get; set; }
+
+        public virtual DbSet<Status> Status { get; set; }
     }
 }
