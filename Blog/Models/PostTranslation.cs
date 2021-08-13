@@ -15,7 +15,7 @@ namespace Blog.Models
 
         public uint LanguageId { get; set; }
 
-        public uint UserId { get; set; }
+        public uint ApplicationUserId { get; set; }
 
         public string Title { get; set; }
 
