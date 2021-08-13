@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blog.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210807133622_Edited_OnDelete_again")]
-    partial class Edited_OnDelete_again
+    [Migration("20210813154224_Initial_Migration")]
+    partial class Initial_Migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -209,7 +209,7 @@ namespace Blog.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.None);
 
-                    b.Property<long?>("ApplicationUserId")
+                    b.Property<long>("ApplicationUserId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Body")
@@ -244,9 +244,6 @@ namespace Blog.Migrations
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("UserId")
-                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -494,7 +491,9 @@ namespace Blog.Migrations
                 {
                     b.HasOne("Blog.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("PostTranslations")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Blog.Models.Category", "Category")
                         .WithMany("PostTranslations")
