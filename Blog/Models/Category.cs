@@ -7,9 +7,9 @@ namespace Blog.Models
 {
     public class Category
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
-        public uint StatusId { get; set; }
+        public int StatusId { get; set; }
 
         public string  Description { get; set; }
 

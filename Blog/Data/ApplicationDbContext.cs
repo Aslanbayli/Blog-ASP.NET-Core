@@ -8,13 +8,12 @@ using System.Text;
 
 namespace Blog.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<uint>, uint>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -25,6 +24,7 @@ namespace Blog.Data
                 .WithMany(t => t.PostTranslations)
                 .HasForeignKey(k => k.PostId)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
 
         public virtual DbSet<Category> Category { get; set; }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Blog.Models
 {
-    public class ApplicationUser : IdentityUser<uint>
+    public class ApplicationUser : IdentityUser<int>
     {
         public List<PostTranslation> PostTranslations { get; set; }
     }
+
 }
 
 

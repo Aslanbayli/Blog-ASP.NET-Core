@@ -7,11 +7,11 @@ namespace Blog.Models
 {
     public class PostTag
     {
-        public uint? Id { get; set; }
+        public int? Id { get; set; }
 
-        public uint PostId { get; set; }
+        public int PostId { get; set; }
 
-        public uint TagId { get; set; }
+        public int TagId { get; set; }
 
         // Relationships
         public Post Post { get; set; }

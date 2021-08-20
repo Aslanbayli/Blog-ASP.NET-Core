@@ -7,7 +7,7 @@ namespace Blog.Models
 {
     public class Tag
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
         public string Title { get; set; }
 

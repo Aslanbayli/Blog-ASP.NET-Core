@@ -7,15 +7,15 @@ namespace Blog.Models
 {
     public class PostTranslation
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
-        public uint PostId { get; set; }
+        public int PostId { get; set; }
 
-        public uint CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
-        public uint LanguageId { get; set; }
+        public int LanguageId { get; set; }
 
-        public uint ApplicationUserId { get; set; }
+        public int ApplicationUserId { get; set; }
 
         public string Title { get; set; }
 

@@ -7,7 +7,7 @@ namespace Blog.Models
 {
     public class Language
     {
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
         public string LanguageCode { get; set; }
 

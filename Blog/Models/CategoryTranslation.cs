@@ -7,11 +7,11 @@ namespace Blog.Models
 {
     public class CategoryTranslation
     {
-        public uint? Id { get; set; }
+        public int? Id { get; set; }
 
-        public uint CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
-        public uint LanguageId { get; set; }
+        public int LanguageId { get; set; }
 
         public string Title { get; set; }
 

@@ -19,7 +19,7 @@ namespace Blog
     public class Startup
     {
         public Startup(IConfiguration configuration)
-        {
+        {   
             Configuration = configuration;
         }
 
@@ -34,12 +34,13 @@ namespace Blog
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddIdentity<ApplicationUser, IdentityRole<uint>>(options => options.SignIn.RequireConfirmedAccount = false)
-                    .AddEntityFrameworkStores<ApplicationDbContext>()
-                    .AddDefaultTokenProviders();
+            //services.AddIdentity<ApplicationUser, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = false)
+            //    .AddEntityFrameworkStores<ApplicationDbContext, int>()
+            //    .AddDefaultTokenProviders();
+
 
             services.AddControllersWithViews();
             services.AddRazorPages();
