@@ -37,11 +37,6 @@ namespace Blog
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            //services.AddIdentity<ApplicationUser, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = false)
-            //    .AddEntityFrameworkStores<ApplicationDbContext, int>()
-            //    .AddDefaultTokenProviders();
-
-
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

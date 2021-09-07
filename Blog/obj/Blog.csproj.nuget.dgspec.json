@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\c#\\Blog\\Blog\\Blog.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\c#\\Blog\\Blog\\Blog.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\c#\\Blog\\Blog\\Blog.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj",
         "projectName": "Blog",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\c#\\Blog\\Blog\\Blog.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\c#\\Blog\\Blog\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
