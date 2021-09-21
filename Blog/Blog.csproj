@@ -19,4 +19,9 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Profiles\" />
+  </ItemGroup>
+
 </Project>
