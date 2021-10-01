@@ -9,6 +9,11 @@ namespace Blog.Models
     public class ApplicationUser : IdentityUser<int>
     {
         public List<PostTranslation> PostTranslations { get; set; }
+
+        public ApplicationUser()
+        {
+
+        }
     }
 
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Blog.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,29 +9,41 @@ namespace Blog.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        public void Delete(object id)
+        public DbContext _context;
+        public DbSet<T> table;
+
+        public GenericRepository(ApplicationDbContext _context)
         {
-            throw new NotImplementedException();
+            this._context = _context;
+            table = _context.Set<T>();
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        // Interface Implementations
+        public async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            return await table.ToListAsync();
         }
 
-        public Task<T> GetById(object id)
+        public async Task<T> GetById(object id)
         {
-            throw new NotImplementedException();
+            return await table.FindAsync(id);
         }
 
         public void Insert(T obj)
         {
-            throw new NotImplementedException();
+            table.Add(obj);
         }
 
         public void Update(T obj)
         {
-            throw new NotImplementedException();
+            table.Attach(obj);
+            _context.Entry(obj).State = EntityState.Modified;
+        }
+
+        public void Delete(object id)
+        {
+            T existing = table.Find(id);
+            table.Remove(existing);
         }
     }
 }
