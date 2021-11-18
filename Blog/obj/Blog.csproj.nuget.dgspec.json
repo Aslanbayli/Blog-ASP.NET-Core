@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj": {}
+    "C:\\Users\\alias\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj": {
+    "C:\\Users\\alias\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj",
+        "projectUniqueName": "C:\\Users\\alias\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj",
         "projectName": "Blog",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\Projects\\C#\\Blog\\Blog\\obj\\",
+        "projectPath": "C:\\Users\\alias\\Desktop\\Projects\\C#\\Blog\\Blog\\Blog.csproj",
+        "packagesPath": "C:\\Users\\alias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alias\\Desktop\\Projects\\C#\\Blog\\Blog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
